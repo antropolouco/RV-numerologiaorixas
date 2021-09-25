@@ -30,6 +30,7 @@ input {
     padding: 10px;
     font-family: 'Noto Sans', sans-serif;
     font-size: 14px;
+    height: 20px;
 }
 
 button {
