@@ -41,6 +41,11 @@ button {
     color: #fff;
     font-size: 14px;
     font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #014e53;
 }
 
 .div-table {
