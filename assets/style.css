@@ -9,6 +9,7 @@ body {
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
     font-size: 14px;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -50,7 +51,7 @@ button:hover {
 
 .div-table {
     display: table;         
-    width: 80%;
+    width: 75%;
     margin-left: auto;
     margin-right: auto;
 }
