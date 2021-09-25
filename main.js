@@ -67,40 +67,43 @@ let resultDate = sumDate();
 // Soma o resultado das letras com o resultado da data de nascimento
 let finalResult = sumLetters + resultDate;
 
-
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  if (countName == 0 || countDate == 0){
-    alert("Não podem haver campos em branco")
-  } else {
-  const url = './assets/orixas.json'
+  const url = "./assets/orixas.json";
 
   fetch(url)
-.then((resp) => resp.json())
-.then((data) => {
-  for (let i = 0; i < data.length; i++) {
-    if (vowel == data[i].numero){
-      document.querySelector(".orixa-vogal").innerHTML = data[i].nome
-    } if (consonant == data[i].numero) {
-      document.querySelector(".orixa-consoante").innerHTML = data[i].nome
-    } if (sumLetters == data[i].numero) {
-      document.querySelector(".orixa-letras").innerHTML = data[i].nome
-    } if (resultDate === data[i].numero) {
-      document.querySelector(".orixa-nascimento").innerHTML = data[i].nome
-    } if (finalResult == data[i].numero) {
-      document.querySelector(".orixa-final").innerHTML = data[i].nome
-    }
-  }
-})
+    .then((resp) => resp.json())
+    .then((data) => {
+      for (let i = 0; i < data.length; i++) {
+        if (vowel == data[i].numero) {
+          document.querySelector(".orixa-vogal").innerHTML = data[i].nome;
+        }
+        if (consonant == data[i].numero) {
+          document.querySelector(".orixa-consoante").innerHTML = data[i].nome;
+        }
+        if (sumLetters == data[i].numero) {
+          document.querySelector(".orixa-letras").innerHTML = data[i].nome;
+        }
+        if (resultDate === data[i].numero) {
+          document.querySelector(".orixa-nascimento").innerHTML = data[i].nome;
+        }
+        if (finalResult == data[i].numero) {
+          document.querySelector(".orixa-final").innerHTML = data[i].nome;
+        }
+      }
+    });
 
   // Exibe os resultados em tela
- 
   document.querySelector(".totem-vogal").innerHTML = `Vogais ${vowel}`;
-  document.querySelector(".totem-consoante").innerHTML = `Consoantes ${consonant}`;
+  document.querySelector(
+    ".totem-consoante"
+  ).innerHTML = `Consoantes ${consonant}`;
   document.querySelector(".letras").innerHTML = sumLetters;
   document.querySelector(".nascimento").innerHTML = resultDate;
   document.querySelector(".soma-final").innerHTML = finalResult;
-
-  }
 });
+
+if (countName == 0 || countDate == 0) {
+  alert("Há campos em branco");
+}
