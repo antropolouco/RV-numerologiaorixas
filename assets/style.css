@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 700;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    width: 75%;
+    margin: 15px 0;
+    padding: 10px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+}
+
+button {
+    width: 75%;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #00929c;
+    border: 1px solid #014e53;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.div-table {
+    display: table;         
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.div-table-row {
+    display: table-row;
+    clear: both;
+    line-height: 2em;
+  }
+
+.totem-vogal, .totem-consoante, .letras, .nascimento, .soma-final {
+    display: table-cell;
+    float: left;
+}
+
+.orixa-vogal, .orixa-consoante, .orixa-letras, .orixa-nascimento, .orixa-final {
+    display: table-cell;
+    float: right;
+}
