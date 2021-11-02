@@ -1,20 +1,15 @@
 function calculate() {
   let form = document.getElementById("form");
-
-  // Pegando nome do formulário
   let countName = form.fullName.value;
-
-  let vowelList = "aeiouAEIOU";
-  let vcounter = 0;
-
-  let consonantList = "bcdfghjklmnqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ";
-  let ccounter = 0;
 
   // Conta o número de vogais menos a última
   function sumVowels() {
+    let vowelList = countName.match(/[aeiou]/gi);
+    let vcounter = 0;
+
     for (let i = 0; i < countName.length; i++) {
       if (vowelList.indexOf(countName[i]) !== -1) {
-        vcounter += 1;
+        vcounter++;
       }
     }
     return vcounter - 1;
@@ -24,13 +19,17 @@ function calculate() {
 
   // Conta o número de consoantes somando com a última vogal
   function sumConsonants() {
+    let consonantList = countName.match(/[bcdfghjklmnpqrstvwxyz]/gi)
+    let ccounter = 0;
+
     for (let i = 0; i < countName.length; i++) {
       if (consonantList.indexOf(countName[i]) !== -1) {
-        ccounter += 1;
+        ccounter++;
       }
     }
     return ccounter + 1;
   }
+
   let consonant = sumConsonants();
 
   // Soma o número de letras
